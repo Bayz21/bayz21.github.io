@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/mada.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel='stylesheet' href='fa/css/all.min.css'>
+
+    <link rel="shortcut icon" type="image/png" href="img/love.png">
+     <script src="js/jquery-3.1.1.min.js"></script>
+    
+     <title>For U</title>
+      
+  </head>
+  <body class="background ">
+<div class="pre-loader">
+  <div class="sk-fading-circle">
+    <div class="sk-circle1 sk-circle"></div>
+    <div class="sk-circle2 sk-circle"></div>
+    <div class="sk-circle3 sk-circle"></div>
+    <div class="sk-circle4 sk-circle"></div>
+    <div class="sk-circle5 sk-circle"></div>
+    <div class="sk-circle6 sk-circle"></div>
+    <div class="sk-circle7 sk-circle"></div>
+    <div class="sk-circle8 sk-circle"></div>
+    <div class="sk-circle9 sk-circle"></div>
+    <div class="sk-circle10 sk-circle"></div>
+    <div class="sk-circle11 sk-circle"></div>
+    <div class="sk-circle12 sk-circle"></div>
+  </div>
+</div>
+    
+    
+
+  
+
+
+   <center>
+<script type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+ if(this.running) return;
+ if(typeof this.origText == "undefined") {
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+   return;
+ }
+ if(this.currentText == "") this.element.innerHTML = "";
+ if(this.currentChar < this.origText.length) {
+   if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+     this.tagBuffer = "<";
+     this.inTag = true;
+     this.currentChar++;
+     this.run();
+     return;
+   } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+     this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+     this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+     this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+   this.currentChar++;
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ } else {
+        this.currentText = "";
+        this.currentChar = 0;
+       this.running = false;
+       this.finishedCallback();
+ }
+}
+</script>
+<div style="display:none"> <audio src="audio/music.mp3" autoplay> </audio> 
+</div>
+
+<div class="animasi-teksin">Happy Birthday</div>
+<p class="animated pulse infinite " style="color: pink;">-Mei Sayang <i class="far fa-heart"></i>-<br></p>
+<!-- Trigger the Modal -->
+
+<img id="myImg" src="img/mei.jpg" class="img-fluid animated fadeInUpBig mb-4 rounded-circle bord" alt="Mei" style="width:100%;max-width: 200px;">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+
+
+
+
+
+
+
+
+<p class="animated fadeInRightBig " style="color:white ;">~A Letter 4 U <i class="far fa-kiss-wink-heart"></i>~</p>
+
+<p id="message"><font>
+"if you've read this,<br>
+that's means you have received a<br>
+little gift from me <i class="far fa-kiss-wink-heart"></i><i class="far fa-kiss-wink-heart"></i><br>
+akwowkoaksk gausa sok inggris lah<br>
+<br>
+Hmmm.. omong opo ya <i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><br>
+Bingung ku yang akwaowko<i class="far fa-laugh-squint"></i><br>
+Bismillah akowkoakw<br>
+<br>
+Selamat ulang tahun sayangkuu <i class="far fa-kiss-beam"></i><i class="far fa-kiss-beam"></i><br>
+Gaperlu tak sebutne siji2 yang<br>
+kabeh doa terbaik gae koe yang<br>
+(padahal ancen bingung pe omong opo) akwoakwoks <i class="far fa-laugh-squint"></i><br> 
+Nek umpomo kadone teko h-/h+<br>
+Hari ulang tahunmu maaf ya yang akwoawkos<br>
+Ngepasi lebaran soale<i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><br>
+Aku bingung pe ngado opo wingi <i class="far fa-laugh-squint"></i> <br>
+Akhire ngejak mbakku muter2 solo yang akwoakwok<br>
+Btw kui aku milih dewe kabeh yang akwokos<br>
+Aku lanang dewe ng toko iku njirr <i class="far fa-smile-beam"></i><i class="far fa-smile-beam"></i><br> 
+liyane ukhti2 kabeh yangg <i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><br>
+aku lanang dewe ndang golek2 ng toko gae wedok <i class="far fa-laugh-squint"></i><i class="far fa-laugh-squint"></i><br>
+mayan sui sih milihku akowkwosk<br>
+padahal aku nek tuku klambi gae dewe<br>
+paling milihe mung 5 menit yang akwoakos<br>
+mbakku sg nganggur tak kon dadi model <i class="far fa-laugh-squint"></i><br>
+dadi kabeh kui ukurane sak mbakku yang<br>
+soale menurutku pawakane mirip sih akwokawos <br>
+(eksploitasi kakak) akwokaowks<br>
+asline aku pe nulis iki ng catetan yang<br>
+lagi njajal nulis dua baris kok dadi terharu dewe aku<i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><i class="far fa-sad-cry"></i><br>
+Ya Allah tulisan opo ikiii akwaokwok<br>
+akhire tak gae model ngene, ben ketok apik yang akwokwos<br>
+sangar kan ya ? . Kang serpis gituloh awkaowkos<br>
+kok malah teko ndi2 ya omongku akwoakwks<br>
+Hmmmm.. opo maneh ya :" <br>
+Mugo koe srek karo pilihanku yang <i class="far fa-laugh-squint"></i><br>
+nek ga srek yo di srek2ne ya awkwoksok<br>
+nek keciliken koe diet'o<br>
+nek kegedean koe mangan'o sing akeh akwokaowk<br>
+guyon yang <i class="far fa-laugh-squint"></i><br><br>
+LOVEEE UUUU SAYANGGG KUUUUUU <i class="far fa-heart"></i><i class="far fa-heart"></i><i class="far fa-heart"></i>
+<br>
+
+
+
+
+</font>
+
+
+</p>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+new TypingText(document.getElementById("message"), 90, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+//Type out examples:
+TypingText.runAll();
+
+ </script>
+ <script type="text/javascript">
+   var modal = document.getElementById("myModal");
+
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+
+ </script>
+<script type="text/javascript">
+(function($){
+  'use strict';
+    $(window).on('load', function () {
+        if ($(".pre-loader").length > 0)
+        {
+            $(".pre-loader").fadeOut("slow");
+        }
+    });
+})(jQuery)
+</script>
+
+
+
+    <!-- Optional JavaScript
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+
+  </body>
+ 
+</html>
